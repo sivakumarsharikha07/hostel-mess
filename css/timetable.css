@@ -1,0 +1,238 @@
+
+/* =====================================
+   WEEKLY TIMETABLE - PASTEL THEME
+===================================== */
+
+#timetable {
+    text-align: center;
+}
+
+/* Main menu container */
+
+#menu {
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* =====================================
+   DAY TABS
+===================================== */
+
+.tt-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px auto;
+}
+
+.tt-tab {
+    padding: 12px 22px;
+    border: 1px solid #e5dafa;
+    border-radius: 25px;
+    background: #f5f0ff;
+    color: #705b91;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tt-tab:hover {
+    background: #e8ddff;
+    transform: translateY(-3px);
+}
+
+.tt-tab.active {
+    background: #d9c9ff;
+    color: #49366e;
+    border-color: #c8b4f5;
+    box-shadow: 0 4px 12px rgba(145, 117, 190, 0.2);
+}
+
+/* =====================================
+   DAILY MENU CARD
+===================================== */
+
+.tt-cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tt-card {
+    width: 90%;
+    max-width: 950px;
+    padding: 30px;
+    margin: 20px auto;
+    background: #ffffff;
+    border: 1px solid #eee5f8;
+    border-radius: 22px;
+    box-shadow: 0 6px 22px rgba(130, 110, 160, 0.10);
+    animation: ttFade 0.4s ease;
+    text-align: center;
+}
+
+.tt-card > h2 {
+    color: #8064a8;
+    font-size: 27px;
+    margin-bottom: 28px;
+}
+
+/* =====================================
+   MEAL SECTIONS
+===================================== */
+
+.tt-meal {
+    padding: 20px;
+    margin: 18px 0;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tt-meal:hover {
+    transform: translateY(-3px);
+}
+
+.tt-meal:nth-of-type(1) {
+    background: #fff0f5;
+}
+
+.tt-meal:nth-of-type(2) {
+    background: #eef5ff;
+}
+
+.tt-meal:nth-of-type(3) {
+    background: #effaf3;
+}
+
+.tt-meal:nth-of-type(4) {
+    background: #f5efff;
+}
+
+.tt-meal h3 {
+    color: #655477;
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+/* =====================================
+   VEG AND NON-VEG OPTIONS
+===================================== */
+
+.tt-food-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.tt-food-options > div {
+    padding: 16px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.tt-food-options p {
+    color: #625d69;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-top: 12px;
+}
+
+/* Veg tag */
+
+#menu .veg-tag {
+    display: inline-block;
+    padding: 6px 17px;
+    border-radius: 20px;
+    background: #d8f3df;
+    color: #287847;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Non-veg tag */
+
+#menu .nonveg-tag {
+    display: inline-block;
+    padding: 6px 17px;
+    border-radius: 20px;
+    background: #ffe0e4;
+    color: #b34d62;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* =====================================
+   DESSERT SECTION
+===================================== */
+
+.tt-dessert {
+    margin-top: 22px;
+    padding: 20px;
+    background: #fff4dc;
+    border-radius: 15px;
+    border: 1px solid #f6e6c5;
+    text-align: center;
+}
+
+.tt-dessert h3 {
+    color: #967047;
+    margin-bottom: 10px;
+}
+
+.tt-dessert p {
+    color: #78644d;
+    font-size: 15px;
+}
+
+/* =====================================
+   ANIMATION
+===================================== */
+
+@keyframes ttFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 650px) {
+
+    .tt-card {
+        width: 95%;
+        padding: 18px;
+    }
+
+    .tt-food-options {
+        grid-template-columns: 1fr;
+    }
+
+    .tt-tab {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .tt-meal {
+        padding: 15px;
+    }
+
+    .tt-card > h2 {
+        font-size: 23px;
+    }
+
+}

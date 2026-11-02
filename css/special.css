@@ -1,0 +1,182 @@
+
+/* FESTIVE SPECIALS */
+
+#special {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+#special h2 {
+    color: #b8860b;
+    margin-bottom: 10px;
+}
+
+.festive-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.festive-tab {
+    padding: 12px 20px;
+    border: 1px solid #e5c76b;
+    border-radius: 25px;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.festive-tab:hover,
+.festive-tab.active {
+    background: #fff4d6;
+    border-color: #c99a20;
+}
+
+.festive-card {
+    max-width: 850px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border: 1px solid #f0dfb0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    text-align: left;
+}
+
+.festive-card h3 {
+    text-align: center;
+    color: #a87912;
+}
+
+.festive-card h4 {
+    margin-bottom: 8px;
+}
+
+.festive-meal {
+    margin-top: 18px;
+}
+
+.festive-meal h4 {
+    margin-bottom: 5px;
+}
+
+.festive-food-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 10px 0 20px;
+}
+
+.festive-food-options > div {
+    padding: 12px;
+    background: #fafafa;
+    border-radius: 10px;
+}
+
+.veg-tag,
+.nonveg-tag {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.veg-tag {
+    color: #16833c;
+    background: #e3f6e9;
+}
+
+.nonveg-tag {
+    color: #c62828;
+    background: #fde8e8;
+}
+
+.festive-dessert {
+    margin-top: 20px;
+    padding: 15px;
+    text-align: center;
+    background: #fff8e8;
+    border-radius: 10px;
+    border: 1px dashed #d5b45c;
+}
+
+.ramadan-card {
+    border-color: #b9a4d8;
+}
+
+.ramadan-card h3 {
+    color: #70519b;
+}
+
+/* AUTOMATIC POPUP */
+
+.festive-popup {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.festive-popup-box {
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+    padding: 35px 25px;
+    background: white;
+    border-radius: 18px;
+    text-align: center;
+    animation: festiveAppear 0.4s ease;
+}
+
+.festive-popup-box h2 {
+    color: #b8860b;
+}
+
+.festive-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.festive-view-button {
+    margin-top: 15px;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 25px;
+    background: #e9c66c;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes festiveAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .festive-food-options {
+        grid-template-columns: 1fr;
+    }
+
+    .festive-card {
+        padding: 16px;
+    }
+}

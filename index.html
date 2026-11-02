@@ -6,60 +6,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hostel Mess Management System</title>
-<style>
-    h1, p {
-    text-align: center;
-}
-</style>
+    <title>Hostel Mess Management</title>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/special.css">
     <link rel="stylesheet" href="css/timetable.css">
     <link rel="stylesheet" href="css/rating.css">
+
+    <!-- Centre all website text -->
+    <style>
+        body {
+            text-align: center;
+        }
+
+        header,
+        section,
+        section h1,
+        section h2,
+        section h3,
+        section h4,
+        section p,
+        section label,
+        section button {
+            text-align: center;
+        }
+
+        .tt-cards,
+        .tt-card,
+        .festive-card,
+        .festive-meal,
+        .festive-dessert,
+        .festive-food-options {
+            text-align: center;
+        }
+
+        .tt-tabs,
+        .festive-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #rating,
+        #admin {
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    <!-- Website Header -->
+    <!-- HEADER -->
     <header>
         <h1>Hostel Mess Management</h1>
         <p>Your Food, Your Choice, Your Feedback!</p>
     </header>
-<!-- Festive Specials Section -->
-<section id="special">
-    <h2>Festive Specials ✨</h2>
 
-    <p>
-        Celebrate every occasion with something delicious!
-        Explore our special holiday menus.
-    </p>
-
-    <div id="festive-menu"></div>
-</section>
-
-    <!-- Weekly Timetable Section -->
+    <!-- WEEKLY TIMETABLE -->
     <section id="timetable">
+
+        <h2>Weekly Mess Menu 🍽️</h2>
+
         <p>
-            Here is the weekly timetable for the mess. Make sure to check the timings and plan your meals accordingly!
+            Explore our weekly breakfast, lunch, snacks and dinner options.
+            Plan your meals for the week!
         </p>
+        <div id="menu"></div>
     </section>
 
-    <!-- Ratings and Feedback Section -->
+    <!-- FESTIVE SPECIALS -->
+    <section id="special">
+
+        <h2>Festive Specials ✨</h2>
+
+        <p>
+            Celebrate every occasion with something delicious!
+            Explore our special holiday menus.
+        </p>
+
+        <div id="festive-menu"></div>
+
+    </section>
+
+    <!-- STUDENT FEEDBACK -->
     <section id="rating">
+
+        <h2>Student Feedback ⭐</h2>
+
         <p>
             Share your feedback about the mess and help us improve!
         </p>
+
     </section>
 
-    <!-- Admin Dashboard Section -->
+    <!-- ADMIN DASHBOARD -->
     <section id="admin">
+
+        <h2>Admin Dashboard 📊</h2>
+
         <p>
-            Admins can manage the mess operations, update menus, and view feedback from students.
+            Admins can manage mess operations, update menus,
+            and view feedback from students.
         </p>
+
     </section>
 
-    <!-- JavaScript Files -->
+    <!-- JAVASCRIPT FILES -->
     <script src="js/login.js" defer></script>
     <script src="js/special.js" defer></script>
     <script src="js/timetable.js" defer></script>
@@ -67,4 +121,5 @@
     <script src="js/admin.js" defer></script>
 
 </body>
+
 </html>
