@@ -1,0 +1,222 @@
+
+/* ===== HOSTEL MESS LOGIN PAGE ===== */
+
+#login {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 15px;
+    box-sizing: border-box;
+
+    
+background:
+    linear-gradient(
+        rgba(24, 48, 34, 0.45),
+        rgba(24, 48, 34, 0.45)
+    ),
+    url("../Hostel Mess Dining Delight.png") center/cover no-repeat;
+
+}
+
+/* Login card */
+
+#login > div {
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+}
+
+/* Heading */
+
+#login h1 {
+    color: #284b35;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Paragraph */
+
+#login p {
+    color: #788579;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* Labels */
+
+#login label {
+    display: block;
+    color: #344c3b;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+/* Input fields */
+
+#login input,
+#login select {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+
+    border: 1px solid #d9e2d8;
+    border-radius: 9px;
+
+    background: #f8faf6;
+    font-size: 15px;
+    outline: none;
+}
+
+#login input:focus,
+#login select:focus {
+    border-color: #527b5c;
+}
+
+/* Login button */
+
+#login button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 23px;
+
+    background: #315c40;
+    color: white;
+
+    border: none;
+    border-radius: 9px;
+
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#login button:hover {
+    background: #21452f;
+}
+
+/* Demo credentials */
+
+#login h3 {
+    color: #315c40;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#login .demo-credentials {
+    background: #f0f5ed;
+    padding: 12px;
+    border-radius: 9px;
+    text-align: center;
+    color: #526653;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+    #login > div {
+        padding: 25px 20px;
+    }
+}
+/* Smaller Logout Card */
+
+#login > div {
+    max-width: 380px;
+    width: 90%;
+    padding: 25px 30px;
+    margin: auto;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+/* Welcome heading */
+
+#login h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Login information */
+
+#login p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* Logout button */
+
+#login button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 9px;
+    margin-top: 12px;
+}
+/* Smaller background after successful login */
+
+#login.logged-in {
+    height: 400px;
+    min-height: 400px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+/* Center welcome card */
+
+#login.logged-in .welcome-box {
+    width: 90%;
+    max-width: 420px;
+    padding: 25px 30px;
+    margin: auto;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    text-align: center;
+}
+
+/* Mobile screen */
+
+@media (max-width: 500px) {
+    #login.logged-in {
+        height: 350px;
+        min-height: 350px;
+    }
+}
+/* Smaller background after successful login */
+
+#login.logged-in {
+    height: 400px;
+    min-height: 400px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+/* Center welcome card */
+
+#login.logged-in .welcome-box {
+    width: 90%;
+    max-width: 420px;
+    padding: 25px 30px;
+    margin: auto;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    text-align: center;
+}
+
+/* Mobile screen */
+
+@media (max-width: 500px) {
+    #login.logged-in {
+        height: 350px;
+        min-height: 350px;
+    }
+}
