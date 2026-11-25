@@ -1,0 +1,189 @@
+/* =====================================
+   RATING SYSTEM - APPETIZING GREEN THEME
+===================================== */
+
+:root {
+    --rt-green-dark: #14301f;
+    --rt-green: #1f4d33;
+    --rt-green-mid: #2f7a4d;
+    --rt-green-bright: #3fa566;
+    --rt-lime: #9fd356;
+    --rt-mint: #e9f7ee;
+    --rt-sage: #d7ecdc;
+    --rt-gold: #f5c451;
+    --rt-gold-deep: #d9961f;
+    --rt-text: #1b2e21;
+    --rt-muted: #3f5e48;
+    --rt-border: #b9dcc4;
+}
+
+/* Rating System */
+
+.rating-container {
+    max-width: 600px;
+    width: 90%;
+    margin: 35px auto;
+    padding: 34px 30px;
+    background:
+        radial-gradient(circle at top right, rgba(159, 211, 86, 0.3), transparent 45%),
+        linear-gradient(170deg, #f7fdf9 0%, var(--rt-sage) 100%);
+    border: 2px solid var(--rt-border);
+    border-radius: 24px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    font-family: "Times New Roman", Georgia, serif;
+    color: var(--rt-text);
+}
+
+/* Gold-and-green strip across the top */
+
+.rating-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--rt-green-bright), var(--rt-gold), var(--rt-lime), var(--rt-gold), var(--rt-green-bright));
+}
+
+.rating-container h2 {
+    color: var(--rt-green-dark);
+    font-size: 28px;
+    margin-top: 6px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.rating-container p {
+    color: var(--rt-muted);
+}
+
+.rating-container label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 7px;
+    font-weight: bold;
+    color: var(--rt-green);
+}
+
+.rating-container select,
+.rating-container textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--rt-border);
+    border-radius: 12px;
+    background: #ffffff;
+    color: var(--rt-text);
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rating-container select:focus,
+.rating-container textarea:focus {
+    border-color: var(--rt-green-bright);
+    box-shadow: 0 0 0 4px rgba(63, 165, 102, 0.2);
+}
+
+.rating-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Stars */
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.star-btn {
+    border: none;
+    background: none;
+    font-size: 38px;
+    color: #c4d9c9;
+    cursor: pointer;
+    padding: 3px;
+    transition: transform 0.2s, color 0.2s;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.star-btn:hover {
+    transform: scale(1.15);
+}
+
+.star-btn.active {
+    color: var(--rt-gold);
+    text-shadow: 0 2px 8px rgba(217, 150, 31, 0.5);
+}
+
+/* Submit button */
+
+.rating-submit {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ffd670, var(--rt-gold-deep));
+    color: var(--rt-green-dark);
+    border: none;
+    border-radius: 25px;
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(217, 150, 31, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rating-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(217, 150, 31, 0.5);
+}
+
+.rating-submit:disabled {
+    background: #b9c9bd;
+    color: #ffffff;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Messages */
+
+.rating-message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Info note */
+
+.rating-note {
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #fff9e0, #ffe9a8);
+    border: 1px dashed var(--rt-gold-deep);
+    border-radius: 14px;
+    font-size: 14px;
+    color: #5a3a10;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 480px) {
+    .rating-container {
+        padding: 20px 16px;
+    }
+
+    .star-btn {
+        font-size: 32px;
+    }
+}
