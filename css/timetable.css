@@ -1,10 +1,39 @@
-
 /* =====================================
-   WEEKLY TIMETABLE - PASTEL THEME
+   WEEKLY TIMETABLE - APPETIZING GREEN THEME
 ===================================== */
+
+:root {
+    --tt-green-dark: #14301f;
+    --tt-green: #1f4d33;
+    --tt-green-mid: #2f7a4d;
+    --tt-green-bright: #3fa566;
+    --tt-lime: #9fd356;
+    --tt-mint: #e9f7ee;
+    --tt-sage: #d7ecdc;
+    --tt-gold: #f5c451;
+    --tt-gold-deep: #d9961f;
+    --tt-text: #1b2e21;
+    --tt-muted: #3f5e48;
+    --tt-border: #b9dcc4;
+}
+
+/* WEEKLY TIMETABLE */
 
 #timetable {
     text-align: center;
+    font-family: "Times New Roman", Georgia, serif;
+    color: var(--tt-text);
+    padding: 40px 20px 50px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    /* Same green base and golden glows as the festive section */
+    background:
+        radial-gradient(circle at 15% 10%, rgba(245, 196, 81, 0.35) 0, transparent 22%),
+        radial-gradient(circle at 85% 20%, rgba(159, 211, 86, 0.3) 0, transparent 18%),
+        radial-gradient(circle at 50% 100%, rgba(245, 196, 81, 0.2) 0, transparent 30%),
+        radial-gradient(circle, rgba(255, 230, 150, 0.14) 2px, transparent 3px) 0 0 / 46px 46px,
+        linear-gradient(160deg, var(--tt-green) 0%, var(--tt-green-dark) 100%);
 }
 
 /* Main menu container */
@@ -13,6 +42,25 @@
     width: 100%;
     margin: 30px auto;
     text-align: center;
+}
+
+
+/* Heading inside the timetable, if present */
+
+#timetable h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #ffd670, var(--tt-gold), var(--tt-lime), var(--tt-gold), #ffd670);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+    animation: ttShimmer 4s linear infinite;
+}
+
+#timetable > p {
+    color: #e8f5ea;
 }
 
 /* =====================================
@@ -25,30 +73,30 @@
     flex-wrap: wrap;
     gap: 12px;
     margin: 25px auto;
+    padding: 0 12px;
 }
 
 .tt-tab {
-    padding: 12px 22px;
-    border: 1px solid #e5dafa;
+    padding: 12px 24px;
+    border: 2px solid var(--tt-gold);
     border-radius: 25px;
-    background: #f5f0ff;
-    color: #705b91;
+    background: #f4fbf6;
+    color: var(--tt-green-dark);
+    font-family: "Times New Roman", Georgia, serif;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
 
-.tt-tab:hover {
-    background: #e8ddff;
-    transform: translateY(-3px);
-}
-
+.tt-tab:hover,
 .tt-tab.active {
-    background: #d9c9ff;
-    color: #49366e;
-    border-color: #c8b4f5;
-    box-shadow: 0 4px 12px rgba(145, 117, 190, 0.2);
+    background: linear-gradient(135deg, var(--tt-green-bright), var(--tt-green));
+    color: #ffffff;
+    border-color: var(--tt-gold);
+    box-shadow: 0 6px 16px rgba(20, 48, 31, 0.45);
+    transform: translateY(-2px);
 }
 
 /* =====================================
@@ -64,20 +112,38 @@
 .tt-card {
     width: 90%;
     max-width: 950px;
-    padding: 30px;
+    padding: 34px;
     margin: 20px auto;
-    background: #ffffff;
-    border: 1px solid #eee5f8;
-    border-radius: 22px;
-    box-shadow: 0 6px 22px rgba(130, 110, 160, 0.10);
+    background:
+        radial-gradient(circle at top right, rgba(159, 211, 86, 0.3), transparent 45%),
+        linear-gradient(170deg, #f7fdf9 0%, var(--tt-sage) 100%);
+    border: 2px solid var(--tt-border);
+    border-radius: 24px;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
     animation: ttFade 0.4s ease;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gold-and-green strip across the top of the card */
+
+.tt-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--tt-green-bright), var(--tt-gold), var(--tt-lime), var(--tt-gold), var(--tt-green-bright));
 }
 
 .tt-card > h2 {
-    color: #8064a8;
+    color: var(--tt-green);
     font-size: 27px;
+    margin-top: 6px;
     margin-bottom: 28px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 /* =====================================
@@ -87,39 +153,25 @@
 .tt-meal {
     padding: 20px;
     margin: 18px 0;
-    border-radius: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.6);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tt-meal:hover {
     transform: translateY(-3px);
-}
-
-.tt-meal:nth-of-type(1) {
-    background: #fff0f5;
-}
-
-.tt-meal:nth-of-type(2) {
-    background: #eef5ff;
-}
-
-.tt-meal:nth-of-type(3) {
-    background: #effaf3;
-}
-
-.tt-meal:nth-of-type(4) {
-    background: #f5efff;
+    box-shadow: 0 8px 20px rgba(20, 48, 31, 0.15);
 }
 
 .tt-meal h3 {
-    color: #655477;
+    color: var(--tt-green-dark);
     font-size: 19px;
     margin-bottom: 18px;
 }
 
 /* =====================================
-   VEG AND NON-VEG OPTIONS
+   VEG OPTIONS
 ===================================== */
 
 .tt-food-options {
@@ -128,16 +180,34 @@
     gap: 18px;
 }
 
+/* Food tiles: fresh green tints, first and last differ slightly */
+
 .tt-food-options > div {
-    padding: 16px;
-    border-radius: 13px;
-    background: rgba(255, 255, 255, 0.8);
+    padding: 16px 14px;
+    border-radius: 16px;
+    background: linear-gradient(160deg, #ffffff 0%, var(--tt-mint) 100%);
+    border: 1px solid var(--tt-border);
+    box-shadow: 0 4px 12px rgba(20, 48, 31, 0.12);
     text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tt-food-options > div:first-child {
+    background: linear-gradient(160deg, #f1faf3 0%, #cdeccf 100%);
+}
+
+.tt-food-options > div:last-child {
+    background: linear-gradient(160deg, #f4fbe9 0%, #dcefbf 100%);
+}
+
+.tt-food-options > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(20, 48, 31, 0.2);
 }
 
 .tt-food-options p {
-    color: #625d69;
-    font-size: 14px;
+    color: var(--tt-muted);
+    font-size: 15px;
     line-height: 1.9;
     margin-top: 12px;
 }
@@ -146,27 +216,19 @@
 
 #menu .veg-tag {
     display: inline-block;
-    padding: 6px 17px;
-    border-radius: 20px;
-    background: #d8f3df;
-    color: #287847;
+    padding: 5px 14px;
+    border-radius: 999px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--tt-green-bright), var(--tt-green-mid));
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
-/* Non-veg tag */
 
-#menu .nonveg-tag {
-    display: inline-block;
-    padding: 6px 17px;
-    border-radius: 20px;
-    background: #ffe0e4;
-    color: #b34d62;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
 
 /* =====================================
    DESSERT SECTION
@@ -174,48 +236,61 @@
 
 .tt-dessert {
     margin-top: 22px;
-    padding: 20px;
-    background: #fff4dc;
-    border-radius: 15px;
-    border: 1px solid #f6e6c5;
+    padding: 18px;
     text-align: center;
+    background: linear-gradient(135deg, #fff9e0, #ffe9a8);
+    border-radius: 16px;
+    border: 2px dashed var(--tt-gold-deep);
+    box-shadow: 0 6px 16px rgba(217, 150, 31, 0.25);
 }
 
 .tt-dessert h3 {
-    color: #967047;
+    color: #5a3a10;
     margin-bottom: 10px;
 }
 
 .tt-dessert p {
-    color: #78644d;
+    color: #5a3a10;
     font-size: 15px;
 }
 
 /* =====================================
-   ANIMATION
+   ANIMATIONS
 ===================================== */
 
 @keyframes ttFade {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(12px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
+@keyframes ttShimmer {
+    to {
+        background-position: 200% center;
+    }
+}
+
 /* =====================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ===================================== */
 
 @media (max-width: 650px) {
+    #timetable {
+        padding: 30px 14px 40px;
+    }
+
+    #timetable h2 {
+        font-size: 26px;
+    }
 
     .tt-card {
         width: 95%;
-        padding: 18px;
+        padding: 20px 16px;
     }
 
     .tt-food-options {
@@ -223,7 +298,7 @@
     }
 
     .tt-tab {
-        padding: 10px 15px;
+        padding: 10px 16px;
         font-size: 13px;
     }
 
@@ -235,4 +310,91 @@
         font-size: 23px;
     }
 
+    .tt-meal h3 {
+        font-size: 18px;
+    }
+}
+
+/* =====================================
+   CENTER BREAKFAST, LUNCH, SNACKS & DINNER
+===================================== */
+
+/* Center the complete menu */
+#menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Center the main timetable card */
+.tt-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Center each meal section */
+.tt-meal {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Center meal headings */
+.tt-meal h3 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center food cards instead of placing them on the left */
+.tt-food-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 18px;
+}
+
+/* Center individual food cards */
+.tt-food-options > div {
+    flex: 0 1 560px;
+    width: 100%;
+    max-width: 560px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center food descriptions */
+.tt-food-options p {
+    text-align: center;
+}
+
+/* Mobile responsive */
+@media (max-width: 650px) {
+    .tt-food-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tt-food-options > div {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tt-meal {
+        padding: 15px;
+    }
 }
