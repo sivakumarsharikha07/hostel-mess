@@ -1,182 +1,770 @@
 
-/* FESTIVE SPECIALS */
+/* ==========================================
+   PREMIUM SPECIAL FOOD MENU
+   DEEP GREEN + GOLDEN THEME
+========================================== */
 
-#special {
-    padding: 30px 20px;
+.special-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #fffdf5, #f4f8ed);
+    border: 1px solid #e4d39a;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(20, 65, 42, 0.10);
+}
+
+.special-heading {
     text-align: center;
+    margin-bottom: 30px;
 }
 
-#special h2 {
-    color: #b8860b;
-    margin-bottom: 10px;
+.special-tag {
+    background: linear-gradient(135deg, #e5c46b, #f8e9b2);
+    color: #17452e;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-.festive-tabs {
+.special-heading h2 {
+    color: #164b32;
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+
+.special-heading p {
+    color: #647568;
+    font-size: 15px;
+}
+
+/* CATEGORY BUTTONS */
+
+.special-category-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
-    margin: 25px 0;
+    gap: 15px;
+    margin: 30px 0;
 }
 
-.festive-tab {
-    padding: 12px 20px;
-    border: 1px solid #e5c76b;
-    border-radius: 25px;
+.category-btn {
+    padding: 14px 25px;
+    border: 2px solid #c9a344;
+    border-radius: 30px;
     background: white;
-    cursor: pointer;
+    color: #185438;
+    font-size: 15px;
     font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
 
-.festive-tab:hover,
-.festive-tab.active {
-    background: #fff4d6;
-    border-color: #c99a20;
+.category-btn:hover,
+.category-btn.active {
+    background: linear-gradient(135deg, #145537, #26734b);
+    color: #ffdf85;
+    box-shadow: 0 5px 15px rgba(20, 85, 55, 0.22);
 }
 
-.festive-card {
-    max-width: 850px;
-    margin: 20px auto;
-    padding: 25px;
-    background: white;
-    border: 1px solid #f0dfb0;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-    text-align: left;
-}
+/* ==========================================
+   TODAY'S SPECIAL
+========================================== */
 
-.festive-card h3 {
-    text-align: center;
-    color: #a87912;
-}
-
-.festive-card h4 {
-    margin-bottom: 8px;
-}
-
-.festive-meal {
-    margin-top: 18px;
-}
-
-.festive-meal h4 {
-    margin-bottom: 5px;
-}
-
-.festive-food-options {
+.today-special-card {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin: 10px 0 20px;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 22px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #123e2b, #206344);
+    border: 2px solid #d5b45d;
+    box-shadow: 0 10px 28px rgba(16, 65, 40, 0.18);
+    animation: specialEntrance 0.6s ease;
 }
 
-.festive-food-options > div {
-    padding: 12px;
-    background: #fafafa;
-    border-radius: 10px;
+.today-special-image {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 17px;
+    border: 3px solid #e2c36d;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-.veg-tag,
-.nonveg-tag {
+.today-special-details {
+    color: white;
+}
+
+.today-special-label {
     display: inline-block;
-    padding: 4px 9px;
-    border-radius: 5px;
+    padding: 9px 17px;
+    background: #f2d47d;
+    color: #17452e;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.today-special-details h2 {
+    color: #f6dc91;
+    font-size: 29px;
+    margin: 18px 0 12px;
+}
+
+.today-special-details p {
+    color: #f0f4e9;
+    line-height: 1.8;
+}
+
+.today-special-details h3 {
+    color: #f5d77e;
+    margin-top: 25px;
+}
+
+/* NUTRITION PANEL */
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.nutrition-box {
+    padding: 16px 8px;
+    text-align: center;
+    background: linear-gradient(145deg, #fff7db, #f2d98e);
+    color: #17452e;
+    border-radius: 13px;
+    border: 1px solid #e2bd55;
+    transition: 0.3s;
+}
+
+.nutrition-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.nutrition-box strong {
+    display: block;
+    font-size: 19px;
+    color: #17583a;
+}
+
+.nutrition-box span {
     font-size: 12px;
     font-weight: bold;
 }
 
-.veg-tag {
-    color: #16833c;
-    background: #e3f6e9;
-}
+/* ==========================================
+   FESTIVAL SPECIAL MENU
+========================================== */
 
-.nonveg-tag {
-    color: #c62828;
-    background: #fde8e8;
-}
-
-.festive-dessert {
-    margin-top: 20px;
-    padding: 15px;
+.festival-selector {
     text-align: center;
-    background: #fff8e8;
-    border-radius: 10px;
-    border: 1px dashed #d5b45c;
+    margin: 25px 0;
 }
 
-.ramadan-card {
-    border-color: #b9a4d8;
-}
-
-.ramadan-card h3 {
-    color: #70519b;
-}
-
-/* AUTOMATIC POPUP */
-
-.festive-popup {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: rgba(0,0,0,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.festive-popup-box {
-    position: relative;
-    max-width: 450px;
-    width: 100%;
-    padding: 35px 25px;
-    background: white;
-    border-radius: 18px;
-    text-align: center;
-    animation: festiveAppear 0.4s ease;
-}
-
-.festive-popup-box h2 {
-    color: #b8860b;
-}
-
-.festive-close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    border: none;
-    background: transparent;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.festive-view-button {
-    margin-top: 15px;
-    padding: 12px 22px;
-    border: none;
-    border-radius: 25px;
-    background: #e9c66c;
-    cursor: pointer;
+.festival-selector select {
+    padding: 13px 22px;
+    border: 2px solid #d1ad53;
+    border-radius: 30px;
+    background: #fffdf3;
+    color: #174c32;
     font-weight: bold;
 }
 
-@keyframes festiveAppear {
+/* FESTIVAL BANNER */
+
+.festival-banner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #103d29, #206b43);
+    border: 2px solid #d8b65d;
+    box-shadow: 0 10px 28px rgba(16, 65, 40, 0.18);
+    overflow: hidden;
+}
+
+.festival-banner img {
+    width: 43%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 17px;
+    border: 3px solid #e6c873;
+    box-shadow: 0 7px 20px rgba(0,0,0,0.3);
+}
+
+.festival-info {
+    flex: 1;
+}
+
+.festival-label {
+    display: inline-block;
+    padding: 9px 18px;
+    background: linear-gradient(135deg, #f8e5a5, #d7ae4e);
+    color: #17452e;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.festival-info h3 {
+    color: #ffdf8a;
+    font-size: 31px;
+    margin: 17px 0;
+}
+
+.festival-info p {
+    color: #fff6df;
+    line-height: 1.8;
+}
+
+/* FESTIVAL MEAL GRID */
+
+.special-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 23px;
+    margin-top: 30px;
+}
+
+.festival-meal-card {
+    padding: 18px;
+    background: linear-gradient(145deg, #ffffff, #f5f8ed);
+    border: 1px solid #ddc475;
+    border-left: 6px solid #bd963d;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(20, 65, 42, 0.09);
+    transition: 0.35s;
+    overflow: hidden;
+}
+
+.festival-meal-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(20, 65, 42, 0.17);
+}
+
+.festival-meal-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 13px;
+    border: 2px solid #d9bd69;
+    margin-bottom: 14px;
+}
+
+.festival-meal-card h3 {
+    color: #185638;
+    font-size: 21px;
+    margin: 8px 0 12px;
+}
+
+.festival-meal-card p {
+    color: #5d6c5d;
+    line-height: 1.8;
+}
+
+/* FESTIVAL NOTE */
+
+.special-note {
+    margin-top: 28px;
+    padding: 16px;
+    text-align: center;
+    color: #185638;
+    background: #edf5e7;
+    border: 1px solid #d5b85d;
+    border-radius: 13px;
+}
+
+/* ANIMATION */
+
+@keyframes specialEntrance {
     from {
         opacity: 0;
-        transform: scale(0.85);
+        transform: translateY(18px);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
 
-@media (max-width: 600px) {
-    .festive-food-options {
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .special-container {
+        padding: 17px;
+    }
+
+    .today-special-card {
         grid-template-columns: 1fr;
     }
 
-    .festive-card {
+    .today-special-image {
+        height: 230px;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .festival-banner {
+        flex-direction: column;
+    }
+
+    .festival-banner img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .special-menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .festival-info h3 {
+        font-size: 25px;
+    }
+}
+
+/* ==========================================
+   SPECIAL FOOD MENU - GREEN & GOLD THEME
+========================================== */
+
+.sm-main-container {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 28px;
+    background: linear-gradient(145deg, #fffdf5, #f1f6eb);
+    border: 1px solid #dfc16c;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(17, 66, 42, 0.10);
+    color: #194b32;
+}
+
+.sm-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sm-heading > span {
+    display: inline-block;
+    padding: 9px 20px;
+    border-radius: 30px;
+    background: #f2dfaa;
+    color: #175437;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.sm-heading h2 {
+    color: #155236;
+    font-size: 32px;
+    margin: 16px 0 8px;
+}
+
+.sm-heading p {
+    color: #657365;
+    line-height: 1.7;
+}
+
+/* CATEGORY TABS */
+
+.sm-category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin: 28px 0;
+}
+
+.sm-category-btn {
+    padding: 14px 24px;
+    background: white;
+    color: #175437;
+    border: 2px solid #c6a34a;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sm-category-btn.active,
+.sm-category-btn:hover {
+    background: linear-gradient(135deg, #12472f, #24744a);
+    color: #f8dc8d;
+    box-shadow: 0 6px 16px rgba(18, 71, 47, 0.2);
+}
+
+/* ==========================================
+   WEEKLY SPECIAL
+========================================== */
+
+.sm-day-buttons {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 9px;
+    margin: 25px 0;
+}
+
+.sm-day-btn {
+    padding: 13px 5px;
+    border: 1px solid #d8bd70;
+    border-radius: 12px;
+    background: white;
+    color: #175437;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sm-day-btn span {
+    display: block;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #a17a28;
+}
+
+.sm-day-btn.active,
+.sm-day-btn:hover {
+    background: #18563a;
+    color: #f7d982;
+    border-color: #d5b456;
+    transform: translateY(-3px);
+}
+
+.sm-day-btn.active span {
+    color: #ffe5a0;
+}
+
+/* SPECIAL FOOD CARD */
+
+.sm-special-card {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 28px;
+    padding: 22px;
+    background: linear-gradient(135deg, #103e2b, #206b43);
+    border: 2px solid #d6b65d;
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(17, 66, 42, 0.18);
+    animation: smFade 0.5s ease;
+}
+
+.sm-special-image-wrap {
+    position: relative;
+}
+
+.sm-special-image-wrap img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 17px;
+    border: 3px solid #e4c66f;
+}
+
+.sm-special-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    background: #f2d47d;
+    color: #17452e;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sm-special-details {
+    align-self: center;
+    color: white;
+}
+
+.sm-meal-type {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: #f4dda0;
+    color: #174c32;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.sm-special-details h2 {
+    color: #ffdf8a;
+    font-size: 29px;
+    margin: 18px 0 10px;
+}
+
+.sm-special-details > p {
+    color: #f0f5e9;
+    line-height: 1.8;
+}
+
+.sm-special-details h3 {
+    color: #f5d77e;
+    margin-top: 22px;
+}
+
+/* NUTRITION GRID */
+
+.sm-nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.sm-nutrition-box {
+    padding: 14px 5px;
+    text-align: center;
+    background: linear-gradient(145deg, #fff8df, #f0d88d);
+    border: 1px solid #e3c46d;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.sm-nutrition-box:hover {
+    transform: translateY(-4px);
+}
+
+.sm-nutrition-box strong {
+    display: block;
+    color: #155437;
+    font-size: 17px;
+}
+
+.sm-nutrition-box span {
+    display: block;
+    color: #705b2c;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.sm-special-details .sm-nutrition-note {
+    font-size: 11px;
+    color: #e5e9d8;
+}
+
+/* ==========================================
+   FESTIVAL SPECIAL MENU
+========================================== */
+
+.sm-festival-selector {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.sm-festival-selector label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: bold;
+    color: #175437;
+}
+
+.sm-festival-selector select {
+    width: min(100%, 320px);
+    padding: 13px 18px;
+    border: 2px solid #d0ad50;
+    border-radius: 30px;
+    background: #fffdf5;
+    color: #175437;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FESTIVAL HERO */
+
+.sm-festival-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: center;
+    padding: 23px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #103d29, #236d45);
+    border: 2px solid #d9b95f;
+    box-shadow: 0 10px 28px rgba(17, 66, 42, 0.17);
+    animation: smFade 0.5s ease;
+}
+
+.sm-festival-banner img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    border-radius: 17px;
+    border: 3px solid #e4c66f;
+}
+
+.sm-festival-info {
+    color: white;
+}
+
+.sm-festival-label {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f9e7a9, #d8b34e);
+    color: #164b32;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.sm-festival-info h2 {
+    color: #ffdf8a;
+    font-size: 30px;
+    margin: 17px 0;
+}
+
+.sm-festival-info p {
+    color: #f2f5e9;
+    line-height: 1.8;
+}
+
+.sm-festival-highlight {
+    display: inline-block;
+    margin-top: 12px;
+    color: #f5d77e;
+    font-weight: bold;
+}
+
+/* FESTIVAL MEAL CARDS */
+
+.sm-festival-menu-heading {
+    text-align: center;
+    color: #185638;
+    margin: 35px 0 22px;
+}
+
+.sm-festival-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.sm-festival-meal-card {
+    overflow: hidden;
+    background: white;
+    border-radius: 18px;
+    border: 1px solid #d9bd69;
+    box-shadow: 0 6px 20px rgba(20, 65, 42, 0.09);
+    transition: 0.35s ease;
+}
+
+.sm-festival-meal-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 27px rgba(20, 65, 42, 0.17);
+}
+
+.sm-festival-meal-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.sm-festival-meal-card:hover img {
+    transform: scale(1.04);
+}
+
+.sm-festival-meal-info {
+    padding: 20px;
+    border-top: 4px solid #d4b354;
+}
+
+.sm-festival-meal-info span {
+    color: #ad852f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.sm-festival-meal-info h3 {
+    color: #175437;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.sm-festival-meal-info p {
+    color: #627163;
+    line-height: 1.7;
+}
+
+.sm-festival-footer {
+    margin-top: 30px;
+    padding: 17px;
+    text-align: center;
+    border-radius: 14px;
+    background: #edf4e7;
+    border: 1px solid #d7bc6b;
+    color: #185638;
+    font-weight: bold;
+}
+
+/* ANIMATION */
+
+@keyframes smFade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE MOBILE DESIGN
+========================================== */
+
+@media (max-width: 750px) {
+    .sm-main-container {
         padding: 16px;
+    }
+
+    .sm-day-buttons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sm-special-card,
+    .sm-festival-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .sm-special-image-wrap img {
+        height: 230px;
+    }
+
+    .sm-festival-banner img {
+        height: 220px;
+    }
+
+    .sm-festival-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sm-special-details h2,
+    .sm-festival-info h2 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 420px) {
+    .sm-nutrition-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sm-day-btn {
+        font-size: 12px;
+    }
+
+    .sm-category-btn {
+        width: 100%;
     }
 }
